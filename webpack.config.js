@@ -9,7 +9,11 @@ module.exports = {
         filename: 'app.bundle.js'
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ]
+        extensions: [ '.tsx', '.ts', '.js' ],
+        alias: {
+            Vue : path.resolve(__dirname, 'node_modules/vue/types/vue')  
+            }
+        
     },
     module: {
         loaders: [{
@@ -21,9 +25,12 @@ module.exports = {
         { 
             test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" 
         },{
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-            exclude: /node_modules/
+            test: /\.ts$/,
+            loader: 'ts-loader',
+            exclude: /node_modules/,
+            options: {
+                appendTsSuffixTo: [/\.vue$/]
+              }
           }]
     }
 };

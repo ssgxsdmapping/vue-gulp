@@ -14,7 +14,7 @@ window.onload = function(){
     /**
      * Loading vue components
      */
-    var myComp = require('./components/AppComponent.js');
+    var myComp = require('./components/MyComponent.ts');
 
     new Vue({
         el: '#app',
