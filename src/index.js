@@ -1,7 +1,25 @@
-const test = require('./test');
-
 /**
  * Materilize dependences
  */
 import materializeCss from '../node_modules/materialize-css/dist/css/materialize.css';
 require('../node_modules/materialize-css/dist/js/materialize.js');
+
+/**
+ * Vue dependecies
+ */
+var Vue = require('../node_modules/vue/dist/vue')
+
+window.onload = function(){
+
+    /**
+     * Loading vue components
+     */
+    var myComp = require('./components/AppComponent.js');
+
+    new Vue({
+        el: '#app',
+        component: myComp
+    })
+
+}
+  
