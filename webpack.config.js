@@ -11,9 +11,8 @@ module.exports = {
     resolve: {
         extensions: [ '.tsx', '.ts', '.js' ],
         alias: {
-            Vue : path.resolve(__dirname, 'node_modules/vue/types/vue')  
-            }
-        
+            'vue$': 'vue/dist/vue.js'
+        }
     },
     module: {
         loaders: [{

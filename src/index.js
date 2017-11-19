@@ -4,6 +4,8 @@
 import materializeCss from '../node_modules/materialize-css/dist/css/materialize.css';
 require('../node_modules/materialize-css/dist/js/materialize.js');
 
+
+
 /**
  * Vue dependecies
  */
@@ -14,11 +16,17 @@ window.onload = function(){
     /**
      * Loading vue components
      */
-    var myComp = require('./components/MyComponent.ts');
+    var Appcomponent = require('./components/MyComponent.js');
+
+    /**
+    var appcomponent = Vue.component('app-component', {
+        template: "<div>Un composant personnalisé !</div>",
+    });
+    **/
 
     new Vue({
         el: '#app',
-        component: myComp
+        components: Appcomponent
     })
 
 }
