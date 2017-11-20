@@ -16,7 +16,7 @@ window.onload = function(){
     /**
      * Loading vue components
      */
-    var Appcomponent = require('./components/MyComponent.js');
+    var Appcomponent = require('./components/XsdComponent.js');
 
     /**
     var appcomponent = Vue.component('app-component', {

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --content-base dist/",
     "build": "webpack --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/ssgxsdmapping/vue-gulp#readme",
   "dependencies": {
+    "jasmine": "^2.8.0",
+    "jsdom": "^11.4.0",
     "materialize-css": "^0.100.2",
     "ts-loader": "^3.1.1",
     "typescript": "^2.6.1",
@@ -26,8 +28,9 @@
   },
   "devDependencies": {
     "css-loader": "^0.28.7",
-    "style-loader": "^0.19.0",
     "file-loader": "^1.1.5",
+    "jasmine-ts": "^0.2.1",
+    "style-loader": "^0.19.0",
     "url-loader": "^0.6.2"
   }
 }
